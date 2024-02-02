@@ -1,11 +1,13 @@
+import AddTaskButton from "./components/add-task-button/add-task-button";
+import Header from "./components/header/header";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>To-Do List</h1>
-      </header>
+      <Header />
+      <AddTaskButton />
     </div>
   );
 }
