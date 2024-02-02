@@ -1,4 +1,12 @@
 button {
-    color:aqua;
-    padding: 20px;
+    background: royalblue;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.add-button {
+    width:100%;
+    text-align: left;
+    
 }
