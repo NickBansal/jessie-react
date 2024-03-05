@@ -3,10 +3,33 @@ button {
     color: white;
     font-size: 14px;
     padding: 10px;
+    
+    &:hover {
+        cursor: pointer;
+        background: pink;
+        color: black;
+        font-weight: bold;
+    }
 }
 
 .add-button {
     width:100%;
     text-align: left;
-    
+}
+
+input {
+    background-color: aquamarine;
+    width: 300px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+select {
+    font-size: 14px;
+    padding: 10px;
+    background: pink;
+}
+
+h2 {
+    color: red;
 }
