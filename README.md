@@ -19,10 +19,19 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# jessie-react
+## jessie-react
 
-## Github commands
-In order to push to github use the following commands: 
+### Github commands
+
+In order to push to github use the following commands:
+
 - `git add .` This adds all the files you've changed and gets them ready to be commited
 - `git commit -m "<Type your message here>"` Commits all changes
 - `git push`
+
+### Things to do
+
+- [ ] Create a util for all api calls
+- [ ] Use util to get data
+- [ ] Show data
+- [ ] Style data
