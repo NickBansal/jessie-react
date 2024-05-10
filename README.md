@@ -25,6 +25,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 In order to push to github use the following commands:
 
+- `git clone <github-url>`
+
 - `git add .` This adds all the files you've changed and gets them ready to be commited
 - `git commit -m "<Type your message here>"` Commits all changes
 - `git push`
