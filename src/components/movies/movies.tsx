@@ -17,10 +17,12 @@ export const Movies = () => {
   return (
     <>
       {data &&
-        data.map((eachMovie: EachMoive) => {
+        data.slice(0, 20).map((eachMovie: EachMoive) => {
           return (
             <div key={eachMovie.id}>
-              <img src={eachMovie.image} />
+              <img src={eachMovie.imdb_url} />
+              <h3>Name:{eachMovie.movie}</h3>
+              <h3>Name:{eachMovie.rating}</h3>
             </div>
           );
         })}

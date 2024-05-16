@@ -8,7 +8,7 @@ function useApiCall<T>({ url }: APItypes): {
   error: string;
   data: T | undefined;
 } {
-  const [data, setData] = useState<T>({} as T);
+  const [data, setData] = useState<T | undefined>();
   const [error, setError] = useState("no error");
 
   const fetchData = async () => {
