@@ -7,13 +7,53 @@ div.user_area {
 
 div.each_user {
     display: grid;
-    grid-template-rows: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px 40px;
     border-style: solid;
     border-width: 2px; 
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'Username username'
+                         'Name name'
+                         'Email email'
+                         'Address address';
+    justify-items: left;
 }
 
 .each_user h5 {
     margin:10px; 
     /* border-bottom: solid;
     border-width: 1px; */
+}
+
+h5.Username {
+    grid-area: Username;
+    border-right:2px; 
+
+}
+
+h5.username {
+    grid-area: username;
+}
+
+h5.Name {
+    grid-area: Name;
+}
+
+h5.name {
+    grid-area: name;
+}
+
+h5.Email {
+    grid-area: Email;
+}
+
+h5.email {
+    grid-area: email;
+}
+
+h5.Address {
+    grid-area: Address;
+}
+
+h5.address {
+    grid-area: address;
 }
