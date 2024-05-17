@@ -1,3 +1,4 @@
+
 .eachphone {
     display: flex;
     width: 500px; 
@@ -57,4 +58,9 @@ div.image {
 .product_area {
     display: flex;
     justify-content: center;
-}
+} 
+
+
+
+
+

@@ -1,6 +1,8 @@
 import React from "react";
 import useApiCall from "utils/hooks/api-call";
 
+import "./movies.css";
+
 export interface EachMoive {
   id: number;
   image: string;
@@ -15,17 +17,21 @@ export const Movies = () => {
   });
   console.log(error, data);
   return (
-    <>
+    <div className="movies_area">
       {data &&
         data.slice(0, 20).map((eachMovie: EachMoive) => {
           return (
-            <div key={eachMovie.id}>
-              <img src={eachMovie.imdb_url} />
-              <h3>Name:{eachMovie.movie}</h3>
-              <h3>Name:{eachMovie.rating}</h3>
+            <div key={eachMovie.id} className="each_movie">
+              <div className="movie_imge">
+                <img src={eachMovie.imdb_url} />
+              </div>
+              <div className="movie_wording">
+                <h4>Name: {eachMovie.movie}</h4>
+                <h4>Rating:{eachMovie.rating}</h4>
+              </div>
             </div>
           );
         })}
-    </>
+    </div>
   );
 };

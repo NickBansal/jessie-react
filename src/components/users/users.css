@@ -1,0 +1,11 @@
+div.user_area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 500px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+div.each_user {
+    display: grid;
+    grid-template-rows: 20px 20px 20px 40px;
+}

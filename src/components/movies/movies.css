@@ -1,0 +1,18 @@
+div.movies_area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+div.each_movie {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'image wording';
+}
+
+div.movie_imge {
+    grid-area: image;
+}
+
+div.movie_wording {
+    grid-area: wording; 
+}
