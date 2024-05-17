@@ -27,12 +27,14 @@ export const Products = () => {
         data.products.map((product) => {
           return (
             <div key={product.id} className="eachphone">
-              <img src={product.images[0]} />
+              <div className="image">
+                <img src={product.images[0]} />
+              </div>
               <div className="wording_parts">
-                <h3>Brand: {product.brand}</h3>
-                <h3>Price: {product.price} </h3>
+                <h4>Brand: {product.brand}</h4>
+                <h4>Price: {product.price} </h4>
                 <h4>Rating: {product.rating}</h4>
-                <h6>Description: {product.description}</h6>
+                <h5>Description: {product.description}</h5>
               </div>
             </div>
           );

@@ -3,8 +3,8 @@
     width: 500px; 
     border: 20px;
     align-items: center;
-    
-    
+    height:500;   
+    margin-bottom: 30px;
     
 }
 
@@ -32,4 +32,29 @@
 
 h6 {
     text-align: left;
+}
+
+div.image {
+    width: 150px;
+    height:150px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.wording_parts h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.wording_parts h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product_area {
+    display: flex;
+    justify-content: center;
 }
