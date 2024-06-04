@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 
+import {
+  Container,
+  EachDes,
+  SelectedCar,
+  SelectedCarBox,
+  SelectedCarDes
+} from "./car-style";
 import { EachCar } from "./cars-types";
 
 export const Cars = () => {
@@ -35,29 +42,41 @@ export const Cars = () => {
   return (
     <div>
       <p>WELCOME TO CARS</p>
-      <select onChange={(e) => fetchACar(Number(e.target.value))}>
-        <option value="" hidden>
-          Select
-        </option>
-        {data &&
-          data.map((eachCar: EachCar) => {
-            return (
-              <option key={eachCar.id} value={eachCar.id}>
-                {eachCar.make}, {eachCar.model}, {eachCar.price}
-              </option>
-            );
-          })}
-      </select>
-      <div>
-        {carSelected && (
-          <div>
-            <img src={carSelected.image} />
-            <p>Make: {carSelected.make}</p>
-            <p>Model:{carSelected.model}</p>
-            <p>Color: {carSelected.color}</p>
-          </div>
-        )}
-      </div>
+      <Container>
+        <select onChange={(e) => fetchACar(Number(e.target.value))}>
+          <option value="" hidden>
+            Select
+          </option>
+          {data &&
+            data.map((eachCar: EachCar) => {
+              return (
+                <option key={eachCar.id} value={eachCar.id}>
+                  {eachCar.make}, {eachCar.model}, {eachCar.price}
+                </option>
+              );
+            })}
+        </select>
+        <div>
+          {carSelected && (
+            <SelectedCarBox>
+              <SelectedCar src={carSelected.image} />
+              <SelectedCarDes>
+                <EachDes>£{carSelected.price}</EachDes>
+                <EachDes>
+                  {carSelected.make}, {carSelected.model}, {carSelected.color}
+                </EachDes>
+
+                <EachDes>
+                  Year: {carSelected.year} | {carSelected.fuelType} |
+                  {carSelected.owners} Owners
+                </EachDes>
+
+                <EachDes>Features: {carSelected.features.join(", ")}</EachDes>
+              </SelectedCarDes>
+            </SelectedCarBox>
+          )}
+        </div>
+      </Container>
     </div>
   );
 };

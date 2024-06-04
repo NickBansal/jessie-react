@@ -1,4 +1,4 @@
-div.movies_area {
+/* div.movies_area {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -15,4 +15,4 @@ div.movie_imge {
 
 div.movie_wording {
     grid-area: wording; 
-}
+} */

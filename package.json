@@ -57,5 +57,8 @@
     "stylelint": "^16.2.1",
     "stylelint-prettier": "^5.0.0",
     "typescript": "*"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

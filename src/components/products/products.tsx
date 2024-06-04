@@ -1,7 +1,13 @@
 import React from "react";
 import useApiCall from "utils/hooks/api-call";
 
-import "./products.css";
+import {
+  Eachphone,
+  EachphoneImg,
+  EachProductDes,
+  ProductArea,
+  WordingParts
+} from "./products.styled";
 
 export interface Products {
   products: {
@@ -22,23 +28,24 @@ export const Products = () => {
   });
   console.log(error, data);
   return (
-    <div className="product_area">
+    <ProductArea>
       {data &&
         data.products.map((product) => {
           return (
-            <div key={product.id} className="eachphone">
-              <div className="image">
-                <img src={product.images[0]} />
-              </div>
-              <div className="wording_parts">
-                <h4>Brand: {product.brand}</h4>
-                <h4>Price: {product.price} </h4>
-                <h4>Rating: {product.rating}</h4>
-                <h5>Description: {product.description}</h5>
-              </div>
-            </div>
+            <Eachphone key={product.id}>
+              <EachphoneImg src={product.images[0]} />
+
+              <WordingParts>
+                <EachProductDes>Brand: {product.brand}</EachProductDes>
+                <EachProductDes>Price: {product.price} </EachProductDes>
+                <EachProductDes>Rating: {product.rating}</EachProductDes>
+                <EachProductDes>
+                  Description: {product.description}
+                </EachProductDes>
+              </WordingParts>
+            </Eachphone>
           );
         })}
-    </div>
+    </ProductArea>
   );
 };

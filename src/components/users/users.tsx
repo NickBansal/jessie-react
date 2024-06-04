@@ -1,6 +1,8 @@
 import React from "react";
 import useApiCall from "utils/hooks/api-call";
 
+import { EachUserStyled, H5Styled, UserArea } from "./users.style";
+
 import "./users.css";
 
 export interface EachUser {
@@ -22,24 +24,22 @@ export const Users = () => {
   });
   console.log(error, data);
   return (
-    <div className="user_area">
-      {data?.map((each: EachUser) => {
-        return (
-          <div key={each.id} className="each_user">
-            <h5 className="Username">Username: </h5>
-            <h5 className="username">{each.username}</h5>
-            <h5 className="Name">Name:</h5>
-            <h5 className="name">{each.name}</h5>
-            <h5 className="Email">Email: </h5>
-            <h5 className="email">{each.email}</h5>
-            <h5 className="Address">Address:</h5>
-            <h5 className="address">
-              {each.address.street}, {each.address.city},{each.address.state},{" "}
-              {each.address.zipcode}
-            </h5>
-          </div>
-        );
-      })}
-    </div>
+    <UserArea>
+      {data?.map((each: EachUser) => (
+        <EachUserStyled key={each.id}>
+          <H5Styled area="Username">Username: </H5Styled>
+          <H5Styled area="username">{each.username}</H5Styled>
+          <H5Styled area="Name">Name:</H5Styled>
+          <H5Styled area="name">{each.name}</H5Styled>
+          <H5Styled area="Email">Email: </H5Styled>
+          <H5Styled area="email">{each.email}</H5Styled>
+          <H5Styled area="Address">Address:</H5Styled>
+          <H5Styled area="address">
+            {each.address.street}, {each.address.city},{each.address.state},{" "}
+            {each.address.zipcode}
+          </H5Styled>
+        </EachUserStyled>
+      ))}
+    </UserArea>
   );
 };
