@@ -23,10 +23,10 @@ export interface Products {
 }
 
 export const Products = () => {
-  const { error, data } = useApiCall<Products>({
+  const { data } = useApiCall<Products>({
     url: "https://dummyjson.com/products"
   });
-  console.log(error, data);
+
   return (
     <ProductArea>
       {data &&
