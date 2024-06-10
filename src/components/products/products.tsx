@@ -23,13 +23,15 @@ export interface Products {
 }
 
 export const Products = () => {
-  const { data } = useApiCall<Products>({
+  const { data, error } = useApiCall<Products>({
     url: "https://dummyjson.com/products"
   });
 
   return (
     <ProductArea>
-      {data &&
+      {data?.products.length === 0 && <p>Data is not available</p>}
+      {!error &&
+        data &&
         data.products.map((product) => {
           return (
             <Eachphone key={product.id}>
@@ -46,6 +48,7 @@ export const Products = () => {
             </Eachphone>
           );
         })}
+      {error && <p>The api call has failed</p>}
     </ProductArea>
   );
 };
