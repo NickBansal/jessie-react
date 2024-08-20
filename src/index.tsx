@@ -5,16 +5,13 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const root = ReactDOM.createRoot(document.getElementById("root") as any);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
 
