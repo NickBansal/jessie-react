@@ -1,20 +1,34 @@
 {
   "eslint.enable": true,
   "editor.formatOnPaste": true,
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "always"
   },
   "prettier.stylelintIntegration": true,
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
   },
   "[typescript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
   }
 }

@@ -15,5 +15,12 @@ export default [
       semi: "error",
       "prefer-const": "error"
     }
+  },
+  {
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
   }
 ];
