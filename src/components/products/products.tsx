@@ -15,28 +15,35 @@ interface Product {
   brand: string;
   images: string;
   rating: number;
-  iscountPercentage: number;
-  description: string;
 }
 
 export const Products = () => {
-  // "https://dummyjson.com/products"
-
   const [products, setProducts] = useState<Product[]>([]);
+  const [error, setError] = useState<string | unknown>("");
+  const [loading, setLoading] = useState<boolean>(true);
 
   const callProductData = async () => {
-    const productsBeforeJSON = await fetch("https://dummyjson.com/products");
-    const productsAfterJSON = await productsBeforeJSON.json();
-    setProducts(productsAfterJSON.products);
+    try {
+      const productsBeforeJSON = await fetch("https://dummyjson.com/products");
+      const productsAfterJSON = await productsBeforeJSON.json();
+      setProducts(productsAfterJSON.products);
+      setLoading(false);
+    } catch (e: unknown) {
+      setError(e);
+    }
   };
 
   useEffect(() => {
-    callProductData();
+    setTimeout(() => {
+      callProductData();
+    }, 3000);
   }, []);
 
   return (
     <>
       <h1>Products</h1>
+      {error !== "" && <p>sorry, there is an error, please try again later</p>}
+      {loading && <p>Loading.....</p>}
       <ProductsWrapper>
         {products &&
           products.map((each: Product) => {

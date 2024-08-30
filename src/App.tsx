@@ -1,16 +1,15 @@
 import React from "react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-
+import { Cars } from "components/cars/cars";
+import { Movies } from "components/movies/movies";
 import { Products } from "components/products/products";
 import { SiteLinks } from "components/site-links/site-links";
+import { Users } from "components/users/users";
 
 import { Header } from "./components/header/header";
 
 import "./App.css";
-import { Users } from "components/users/users";
-import { Movies } from "components/movies/movies";
-import { Cars } from "components/cars/cars";
 
 const router = createBrowserRouter([
   {
@@ -46,15 +45,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-      <SiteLinks />
-      <Routes>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/users" element={<Users />}></Route>
-        <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/cars" element={<Cars />}></Route>
-      </Routes> */}
-
       <RouterProvider router={router} />
     </div>
   );

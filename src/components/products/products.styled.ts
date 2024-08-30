@@ -26,7 +26,7 @@ export const ProductTitle = styled.h5`
 
 export const Img = styled.img`
   height: 150px;
-  width: 15opx;
+  width: 150px;
   grid-row: 2 / span 6;
   grid-colum: 1 / span 1;
 `; 
